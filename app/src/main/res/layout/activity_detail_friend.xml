@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="32dp"
+    android:paddingHorizontal="24dp"
+    tools:context=".DetailFriend">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="8dp"
+                android:contentDescription="@string/photo"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtName"
+                app:srcCompat="@drawable/ic_smile"
+                tools:ignore="VectorDrawableCompat" />
+
+            <EditText
+                android:id="@+id/sometxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/input_field"
+                android:hint="Write sometext"
+                android:importantForAutofill="no"
+                android:inputType="textPersonName"
+                android:maxLines="1"
+                app:layout_constraintTop_toBottomOf="@+id/txtday" />
+
+            <ImageButton
+                android:id="@+id/imageButton"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:contentDescription="@string/icon"
+                android:elevation="10dp"
+                android:onClick="takeImage"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView"
+                app:layout_constraintEnd_toEndOf="@+id/imageView"
+                app:layout_constraintStart_toStartOf="@+id/imageView"
+                app:layout_constraintTop_toBottomOf="@+id/imageView"
+                app:srcCompat="@drawable/ic_pencil"
+                tools:ignore="VectorDrawableCompat" />
+
+            <CheckBox
+                android:id="@+id/cbSch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/cbHome"
+                android:layout_alignBottom="@id/cbHome"
+                android:layout_toEndOf="@id/cbHome"
+                android:layout_marginStart="12dp"
+                android:text="School"
+                app:layout_constraintBottom_toBottomOf="@+id/cbHome"
+                app:layout_constraintStart_toEndOf="@+id/cbHome"
+                app:layout_constraintTop_toTopOf="@+id/cbHome" />
+
+            <TextView
+                android:id="@+id/tv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Name"
+                android:fontFamily="@font/body_bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtName"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="20dp"
+                android:text="Email"
+                android:fontFamily="@font/body_bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtName" />
+
+            <RadioGroup
+                android:id="@+id/rg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="@+id/tv3"
+                app:layout_constraintStart_toStartOf="@+id/sEmail"
+                app:layout_constraintTop_toTopOf="@+id/tv3">
+
+                <RadioButton
+                    android:id="@+id/rbmale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Male" />
+
+                <RadioButton
+                    android:id="@+id/rbfemale"
+                    android:layout_marginStart="12dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Female" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tv4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/cbHome"
+                android:layout_alignBottom="@id/cbHome"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="Friend of"
+                android:fontFamily="@font/body_bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rg" />
+
+            <EditText
+                android:id="@+id/txtday"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cbSch"
+                android:layout_marginTop="14dp"
+                android:layout_toEndOf="@id/tv5"
+                android:enabled="false"
+                android:hint=""
+                android:importantForAutofill="no"
+                android:inputType="textPersonName"
+                android:maxLength="12"
+                android:maxLines="1"
+                app:layout_constraintStart_toStartOf="@+id/cbHome"
+                app:layout_constraintTop_toBottomOf="@+id/cbHome" />
+
+            <ImageButton
+                android:id="@+id/pickbtn"
+                android:layout_width="35dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:contentDescription="@string/icon"
+                android:onClick="showDateDialog"
+                android:scaleType="center"
+                app:srcCompat="@drawable/ic_baseline_calendar"
+                app:layout_constraintBottom_toBottomOf="@+id/txtday"
+                app:layout_constraintStart_toEndOf="@+id/txtday"
+                app:layout_constraintTop_toTopOf="@+id/txtday" />
+
+            <Switch
+                android:id="@+id/sEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtName"
+                android:layout_toEndOf="@id/tv2"
+                app:layout_constraintBottom_toBottomOf="@+id/tv2"
+                app:layout_constraintStart_toStartOf="@+id/txtName"
+                app:layout_constraintTop_toTopOf="@+id/tv2"
+                tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+            <CheckBox
+                android:id="@+id/cbHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rg"
+                android:layout_toEndOf="@id/tv4"
+                android:text="Home"
+                app:layout_constraintBottom_toBottomOf="@+id/tv4"
+                app:layout_constraintStart_toStartOf="@+id/sEmail"
+                app:layout_constraintTop_toTopOf="@+id/tv4" />
+
+            <TextView
+                android:id="@+id/tv5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/txtday"
+                android:layout_alignBottom="@id/txtday"
+                android:layout_alignParentStart="true"
+                android:gravity="center"
+                android:text="Birthday"
+                android:fontFamily="@font/body_bold"
+                app:layout_constraintBottom_toBottomOf="@+id/txtday"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/txtday" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="Rakha Zahran N | XII RPL 1 | 2020"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnSave" />
+
+            <Button
+                android:id="@+id/btnSave"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:onClick="save"
+                android:text="Save"
+                android:background="@drawable/button_primary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sometxt" />
+
+            <TextView
+                android:id="@+id/tv3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/rg"
+                android:layout_alignBottom="@id/rg"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="Gender"
+                android:fontFamily="@font/body_bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sEmail" />
+
+            <EditText
+                android:id="@+id/txtName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="32dp"
+                android:layout_toEndOf="@+id/tv1"
+                android:background="@drawable/input_field"
+                android:importantForAutofill="no"
+                android:inputType="textPersonName"
+                android:lines="1"
+                android:maxLength="50"
+                android:maxLines="1"
+                app:layout_constraintBottom_toBottomOf="@+id/tv1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv1"
+                app:layout_constraintTop_toTopOf="@+id/tv1" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

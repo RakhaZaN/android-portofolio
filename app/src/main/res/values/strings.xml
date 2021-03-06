@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">New Portofolio</string>
+
+    <!--  Biodata  -->
+    <string name="fname">Rakha Zahran Nurfirmansyah</string>
+    <string name="bday">Jakarta, December 26 2002</string>
+    <string name="gender">Male</string>
+    <string name="address">Tengki street No 30 Rt 010 Rw 003 Cipayung, East Jakarta</string>
+    <string name="location">Jakarta, Indonesia</string>
+    <string name="bio">This is my bio profile, for now just like this to display lorem ipsum</string>
+
+    <!--  Friends List  -->
+    <string name="flist">My Friends</string>
+    <string name="add_new">Add New</string>
+    <string name="delete">Delete</string>
+
+    <!--  Array items  -->
+    <string-array name="uploadImage">
+        <item>Take a Photo</item>
+        <item>Pick From Gallery</item>
+        <item>Remove Image</item>
+    </string-array>
+    <string-array name="arr_status">
+        <item>teman</item>
+        <item>sahabat</item>
+        <item>cuma kenal</item>
+        <item>gakenal</item>
+        <item>no comment</item>
+    </string-array>
+
+
+    <!--  Content Desctiption  -->
+    <string name="photo">photo</string>
+    <string name="icon">icon</string>
+    <string name="button">button</string>
+</resources>
