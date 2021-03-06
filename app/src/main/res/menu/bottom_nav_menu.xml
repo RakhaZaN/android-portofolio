@@ -8,6 +8,6 @@
         android:title="Apps"
         android:icon="@drawable/ic_products" />
     <item android:id="@+id/skillsFragment"
-        android:title="Skiils"
+        android:title="Skills"
         android:icon="@drawable/ic_check" />
 </menu>

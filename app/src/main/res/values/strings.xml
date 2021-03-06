@@ -14,6 +14,13 @@
     <string name="add_new">Add New</string>
     <string name="delete">Delete</string>
 
+    <!--  Apps  -->
+    <string name="apps">Apps</string>
+    <string name="app1">Calculator</string>
+    <string name="app2">Friends List</string>
+    <string name="app3">Integrated API</string>
+    <string name="other">Comming Soon</string>
+
     <!--  Array items  -->
     <string-array name="uploadImage">
         <item>Take a Photo</item>

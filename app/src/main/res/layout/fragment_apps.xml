@@ -16,7 +16,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/heading1"
         android:textSize="24sp"
-        android:text="Apps" />
+        android:text="@string/apps" />
 
     <GridLayout
         android:layout_width="match_parent"
@@ -62,47 +62,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/heading2"
-                    android:text="Calculator"/>
-
-            </LinearLayout>
-
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cardApi"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:layout_gravity="fill"
-            app:cardBackgroundColor="@color/light"
-            app:cardCornerRadius="0dp"
-            android:layout_row="0"
-            android:layout_column="1"
-            android:layout_columnWeight="1"
-            tools:targetApi="lollipop">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:paddingVertical="32dp"
-                android:gravity="center"
-                android:layout_gravity="center_vertical|center_horizontal"
-                tools:ignore="UseCompoundDrawables">
-
-                <ImageView
-                    android:id="@+id/imageView3"
-                    android:layout_width="match_parent"
-                    android:layout_height="64dp"
-                    android:contentDescription="@string/icon"
-                    app:srcCompat="@drawable/ic_ghost"
-                    app:tint="@color/dark" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/heading2"
-                    android:text="Api Integrated"/>
+                    android:text="@string/app1"/>
 
             </LinearLayout>
 
@@ -116,8 +76,8 @@
             android:layout_gravity="fill"
             app:cardBackgroundColor="@color/light"
             app:cardCornerRadius="0dp"
-            android:layout_row="1"
-            android:layout_column="0"
+            android:layout_row="0"
+            android:layout_column="1"
             android:layout_columnWeight="1"
             tools:targetApi="lollipop">
 
@@ -142,7 +102,47 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/heading2"
-                    android:text="Friends List"/>
+                    android:text="@string/app2"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardApi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_gravity="fill"
+            app:cardBackgroundColor="@color/light"
+            app:cardCornerRadius="0dp"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            tools:targetApi="lollipop">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingVertical="32dp"
+                android:gravity="center"
+                android:layout_gravity="center_vertical|center_horizontal"
+                tools:ignore="UseCompoundDrawables">
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    android:contentDescription="@string/icon"
+                    app:srcCompat="@drawable/ic_ghost"
+                    app:tint="@color/dark" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/heading2"
+                    android:text="@string/app3"/>
 
             </LinearLayout>
 
@@ -181,12 +181,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/heading2"
-                    android:text="Cooming soon"/>
+                    android:text="@string/other"/>
 
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
-
 
     </GridLayout>
 

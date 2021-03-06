@@ -1,6 +1,5 @@
 package com.belajar.newportofolio;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -67,15 +66,20 @@ public class AppsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+        View view = inflater.inflate(R.layout.fragment_apps, container, false);
+        System.out.println(getActivity());
+        System.out.println(view);
 
-        cardCalcu = requireActivity().findViewById(R.id.cardCal);
-        cardApi = requireActivity().findViewById(R.id.cardApi);
-        cardFl = requireActivity().findViewById(R.id.cardFl);
-        cardO = requireActivity().findViewById(R.id.cardO);
+        cardCalcu = view.findViewById(R.id.cardCal);
+        cardApi = view.findViewById(R.id.cardApi);
+        cardFl = view.findViewById(R.id.cardFl);
+        cardO = view.findViewById(R.id.cardO);
 
         cardCalcu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), Calculator.class);
+                startActivity(intent);
                 Toast.makeText(getActivity(), "Calulator", Toast.LENGTH_SHORT).show();
             }
         });
@@ -83,6 +87,8 @@ public class AppsFragment extends Fragment {
         cardApi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), AboutFriends.class);
+                startActivity(intent);
                 Toast.makeText(getActivity(), "API Integration", Toast.LENGTH_SHORT).show();
             }
         });
@@ -90,6 +96,8 @@ public class AppsFragment extends Fragment {
         cardFl.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), IntegratedApi.class);
+                startActivity(intent);
                 Toast.makeText(getActivity(), "Friends List", Toast.LENGTH_SHORT).show();
             }
         });
@@ -103,7 +111,7 @@ public class AppsFragment extends Fragment {
 
 
 
-        return inflater.inflate(R.layout.fragment_apps, container, false);
+        return view;
     }
 
 }
